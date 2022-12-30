@@ -63,7 +63,7 @@ module.exports = {
         },
         ctYellow: {
           500: "#f6c000",
-          600: "#FctE31",
+          600: "#FFCE31",
         },
         ctBrown: {
           500: "#FF8831",
