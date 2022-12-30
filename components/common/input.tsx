@@ -68,7 +68,7 @@ export const SelectInput: React.FC<SelectProps> = ({ label, ...props }) => {
 };
 interface RadioProps {
   label: string;
-  value: string;
+  value: string|boolean;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   options: { value: string; label: string }[];
 }
@@ -123,18 +123,6 @@ interface ImageProps {
   value: string | null;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
-const getBase64 = (file: File): Promise<string> => {
-  return new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => {
-      resolve(reader.result as string);
-    };
-    reader.onerror = (error) => {
-      reject(error);
-    };
-  });
-};
 export const ImageSelect = ({ onChange, value, imageUpload }: ImageProps) => {
   return (
     <div className="space-y-6 sm:space-y-5">
@@ -179,6 +167,7 @@ export const ImageSelect = ({ onChange, value, imageUpload }: ImageProps) => {
                 </span>
 
                 <input
+                accept="image/*"
                   id="file-upload"
                   name="file-upload"
                   type="file"

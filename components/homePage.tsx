@@ -101,8 +101,8 @@ const HomePage = () => {
                                   height={16}
                                   alt="whatsapp"
                                 />{" "}
-                                <span className="ml-2 capitalize">
-                                  {item.isWhatsapp}
+                                <span className="ml-2">
+                                  {item.isWhatsapp?"Yes":'No'}
                                 </span>
                               </div>
                             </div>

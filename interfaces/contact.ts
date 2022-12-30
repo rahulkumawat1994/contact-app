@@ -2,7 +2,7 @@ export interface ContactInterface {
   name: string;
   phone: string;
   type: Type;
-  isWhatsapp: string;
+  isWhatsapp: boolean|string;
   image: string | null;
 }
 export enum Type {
