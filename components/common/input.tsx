@@ -163,7 +163,7 @@ export const ImageSelect = ({ onChange, value, imageUpload }: ImageProps) => {
                 className="relative cursor-pointer rounded-md bg-white font-medium text-indigo-600 hover:text-indigo-500"
               >
                 <span className="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2">
-                  Change
+                  {(imageUpload||value)?"Change Image":"Add Image"}
                 </span>
 
                 <input
